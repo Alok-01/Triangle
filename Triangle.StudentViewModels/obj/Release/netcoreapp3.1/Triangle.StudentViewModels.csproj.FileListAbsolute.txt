@@ -1,0 +1,7 @@
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\bin\Release\netcoreapp3.1\Triangle.StudentViewModels.deps.json
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\bin\Release\netcoreapp3.1\Triangle.StudentViewModels.dll
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\bin\Release\netcoreapp3.1\Triangle.StudentViewModels.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\obj\Release\netcoreapp3.1\Triangle.StudentViewModels.AssemblyInfoInputs.cache
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\obj\Release\netcoreapp3.1\Triangle.StudentViewModels.AssemblyInfo.cs
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\obj\Release\netcoreapp3.1\Triangle.StudentViewModels.dll
+D:\SecureAppServer03-Jan\Triangle.StudentViewModels\obj\Release\netcoreapp3.1\Triangle.StudentViewModels.pdb

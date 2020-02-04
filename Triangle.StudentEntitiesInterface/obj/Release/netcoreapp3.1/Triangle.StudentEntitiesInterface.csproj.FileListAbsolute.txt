@@ -1,0 +1,8 @@
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\bin\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.deps.json
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\bin\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\bin\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\obj\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.csprojAssemblyReference.cache
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\obj\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.AssemblyInfoInputs.cache
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\obj\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.AssemblyInfo.cs
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\obj\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\SecureAppServer03-Jan\Triangle.StudentEntitiesInterface\obj\Release\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb

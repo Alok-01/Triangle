@@ -1,0 +1,11 @@
+D:\SecureAppServer03-Jan\Triangle.Common\bin\Release\netcoreapp3.1\Triangle.Common.deps.json
+D:\SecureAppServer03-Jan\Triangle.Common\bin\Release\netcoreapp3.1\Triangle.Common.dll
+D:\SecureAppServer03-Jan\Triangle.Common\bin\Release\netcoreapp3.1\Triangle.Common.pdb
+D:\SecureAppServer03-Jan\Triangle.Common\bin\Release\netcoreapp3.1\Triangle.DbManagement.dll
+D:\SecureAppServer03-Jan\Triangle.Common\bin\Release\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.csprojAssemblyReference.cache
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.AssemblyInfoInputs.cache
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.AssemblyInfo.cs
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.csproj.CopyComplete
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.dll
+D:\SecureAppServer03-Jan\Triangle.Common\obj\Release\netcoreapp3.1\Triangle.Common.pdb

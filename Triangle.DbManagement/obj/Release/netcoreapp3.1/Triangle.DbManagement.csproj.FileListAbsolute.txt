@@ -1,0 +1,7 @@
+D:\SecureAppServer03-Jan\Triangle.DbManagement\bin\Release\netcoreapp3.1\Triangle.DbManagement.deps.json
+D:\SecureAppServer03-Jan\Triangle.DbManagement\bin\Release\netcoreapp3.1\Triangle.DbManagement.dll
+D:\SecureAppServer03-Jan\Triangle.DbManagement\bin\Release\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\SecureAppServer03-Jan\Triangle.DbManagement\obj\Release\netcoreapp3.1\Triangle.DbManagement.AssemblyInfoInputs.cache
+D:\SecureAppServer03-Jan\Triangle.DbManagement\obj\Release\netcoreapp3.1\Triangle.DbManagement.AssemblyInfo.cs
+D:\SecureAppServer03-Jan\Triangle.DbManagement\obj\Release\netcoreapp3.1\Triangle.DbManagement.dll
+D:\SecureAppServer03-Jan\Triangle.DbManagement\obj\Release\netcoreapp3.1\Triangle.DbManagement.pdb

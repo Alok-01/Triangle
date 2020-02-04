@@ -1,0 +1,37 @@
+﻿@model Triangle.IdentityWebServer.Models.LoginViewModel;
+
+@{
+
+}
+<div class="col-md-9">
+    <div class="form-group">
+        <div class="col-md-12">
+            <h4>Login Here</h4>
+        </div>
+    </div>
+    <form asp-controller="Auth" asp-action="Login" method="post">
+        <input type="hidden" asp-for="ReturnUrl" />
+        <div class="form-group">
+            <div class="col-md-12">
+                <label>
+                    User Name
+                </label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class = "text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label>Password</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class = "text-danger" ></span>
+            </div>
+        </div>
+        <div><div class="col-md-12"><button type="submit" class="btn btn-default">Sign In</button></div></div>
+    </form>
+    <div>
+        <div class="form-group">
+            <a asp-controller="Auth" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
+        </div>
+    </div>
+</div>

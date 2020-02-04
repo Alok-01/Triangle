@@ -1,0 +1,11 @@
+﻿
+@{
+}
+@if (this.User.Identity.IsAuthenticated)
+{
+    <h1>Welcome to Triangle</h1>
+}
+
+<h2>@Context.User.Identity.Name</h2>
+
+<hr />

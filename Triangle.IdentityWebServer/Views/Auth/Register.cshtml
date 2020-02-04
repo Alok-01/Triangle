@@ -1,0 +1,29 @@
+﻿@model Triangle.IdentityWebServer.Models.RegisterViewModel;
+
+@{
+
+}
+    <form asp-controller="Auth" asp-action="Register" method="post">
+        <input type="hidden" asp-for="ReturnUrl" />
+        <div>
+            <label>User Name</label>
+            <input asp-for="UserName" />
+            <span asp-validation-for="UserName"></span>
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div><button type="submit">Register In</button></div>
+        
+    </form>
+    <div>
+        <a asp-controller="Auth" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">Back to Login</a>
+    </div>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Triangle.StudentBusinessServiceInterface\Triangle.StudentBusinessServicesInterface.csproj" />
+    <ProjectReference Include="..\Triangle.StudentEntitiesInterface\Triangle.StudentEntitiesInterface.csproj" />
+    <ProjectReference Include="..\Triangle.StudentRepositoriesInterface\Triangle.StudentRepositoriesInterface.csproj" />
+    <ProjectReference Include="..\Triangle.StudentRepositories\Triangle.StudentRepositories.csproj" />
+  </ItemGroup>
+
+</Project>

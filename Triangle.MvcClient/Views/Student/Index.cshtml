@@ -1,0 +1,39 @@
+﻿@*@model MvcClient.Models.StudentRegistrationModel;*@
+@model Triangle.StudentViewModels.StudentRegistrationModel;
+@{
+}
+<h1>Student Registration</h1>
+<h2>@Context.User.Identity.Name</h2>
+@*<div>
+        <a asp-controller="Home" asp-action="Logout" asp-route-returnUrl="/Home/Logout">Logout</a>
+    </div>*@
+<hr />
+<form asp-controller="Student" asp-action="Index" method="post">
+    @*<input type="hidden" asp-for="ReturnUrl" />*@
+    <div>
+        <label>Student Name</label>
+        <input asp-for="StudentName" class="form-control" />
+        <span asp-validation-for="StudentName" class = "text-danger"></span>
+    </div>
+
+    <div>
+        <label>Roll Number</label>
+        <input asp-for="StudentRollNumber" class="form-control" />
+        <span asp-validation-for="StudentRollNumber" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Father Name</label>
+        <input asp-for="StudentFatherName" class="form-control" />
+        <span asp-validation-for="StudentFatherName" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Mother Name</label>
+        <input asp-for="StudentMotherName" class="form-control" />
+        <span asp-validation-for="StudentMotherName" class="text-danger"></span>
+    </div>
+    <div><button type="submit">Save Student</button></div>
+    <hr />
+    <div>
+        @Html.Label("Name", (string)ViewBag.Name)
+    </div>
+</form>

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Triangle.ApiStudent</AssemblyName>
+    <RootNamespace>Triangle.ApiStudent</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\SecretController.cs" />
+    <Compile Remove="Models\StudentRegistrationModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\StudentController.cs~RF1e95fa9.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Triangle.Common\Triangle.Common.csproj" />
+    <ProjectReference Include="..\Triangle.StudentEntitiesInterface\Triangle.StudentEntitiesInterface.csproj" />
+    <ProjectReference Include="..\Triangle.StudentEntities\Triangle.StudentEntities.csproj" />
+    <ProjectReference Include="..\Triangle.StudentModelServicesInterface\Triangle.StudentModelServicesInterface.csproj" />
+    <ProjectReference Include="..\Triangle.StudentModelServices\Triangle.StudentModelServices.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.deps.json
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.dll
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.Common.dll
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.DbManagement.dll
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.StudentViewModels.dll
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.Common.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.StudentViewModels.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\bin\Release\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.csprojAssemblyReference.cache
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.AssemblyInfoInputs.cache
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.AssemblyInfo.cs
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.csproj.CopyComplete
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.dll
+D:\SecureAppServer03-Jan\Triangle.StudentModelServicesInterface\obj\Release\netcoreapp3.1\Triangle.StudentModelServicesInterface.pdb
