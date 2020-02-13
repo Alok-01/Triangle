@@ -15,6 +15,7 @@ Deisgn :
 3) Onion Archiecture
 4) Domain Based Design
 5) Microservices Architure [A thin layer of MSA applied]
+6) CQRS Implementation in Triangle.ApiStudent.StudentMediatRController.cs
 
 Current Application
 1) Code Complexity at moment 85%
