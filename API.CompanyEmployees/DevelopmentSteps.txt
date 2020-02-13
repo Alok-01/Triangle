@@ -1,0 +1,46 @@
+﻿Step-1 
+Act:
+Go to launchSettings.json file, which can be found in the Properties section of the Solution Explorer window.
+LaunchBrowser property to 'false' to prevent the web browser from launching on application start.
+Reason: 
+Web API project and we don’t really need a browser to check our API out. 
+We will use Postman (described later) for this purpose.
+
+Knowledge-1
+Before Core 3.0 Startup.cs using following stuffs:
+a) UseKestrel() b) the UseIISIntegration()
+
+Step-2
+In Configure Method of Startup.cs, add following
+app.UseForwardedHeaders() will forward proxy headers to the current request. This will help us during application deployment. 
+app.UseStaticFiles() enables using static files for the request. If we don’t set a path to the static files directory, it will use a wwwroot folder in our project by default.
+
+Knowledge-2
+a) So the UseRouting() method should be called before the UseAuthorization() method and UseCors() or UseStaticFiles() 
+   have to be called before the UseRouting() method.
+b) instead of AddMvc() as used in 2.2, now we have AddControllers(). This method registers only the controllers in IServiceCollection 
+   and not Views or Pages because they are not required in the Web API project which we are building.
+
+Knowledge-3
+a) services.AddSingleton: 
+   By calling the services.AddSingleton method, we can create a service the first time we request it and then every subsequent request will call the 
+   same instance of the service. This means that all components share the same service every time they need it and the same instance will be used for 
+   every method call. 
+  
+b) services.AddScoped:
+   By calling the services.AddScoped method, we can create a service once per request.
+   That means whenever we send an HTTP request to the application, a new instance of the service will be created. 
+
+c) services.AddTransient:   
+   By calling the services.AddTransient method, we can create a service each time the application requests it. This means that if multiple components need 
+   the service, it will be created again for every single component request.
+
+Knowledge-4
+What is Dependency Injection (DI) exactly and what is IoC (Inversion of Control)?
+Dependency injection is a technique we use to achieve the decoupling of objects and their dependencies. 
+It means that rather than instantiating an object explicitly in a class every time we need it, we can instantiate it once and then send it to the class.
+This is often done through a constructor. The specific approach we utilize is also known as the Constructor Injection.
+In a system that is designed around DI, you may find many classes requesting their dependencies via their constructors. 
+In this case, it is helpful to have a class that manages and provides dependencies to classes through the constructor.
+These classes are referred to as containers or more specifically, Inversion of Control containers. 
+An IoC container is essentially a factory that is responsible for providing instances of the types that are requested from it.
