@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +27,7 @@ namespace Triangle.ApiStudent
             Configuration.GetSection("ConnectionStrings").Bind("DatabaseConnectionString");
             var strConnection = Configuration.GetConnectionString("DatabaseConnectionString");
             ConnectionFactory.Initialize("StudentV4Db", strConnection);
+            services.AddMediatR(typeof(Startup));
             services.AddTransient<IStudentModelService, StudentModelService>();
             services.AddTransient<IStudentBusinessService, StudentBusinessService>();
             services.AddTransient<IStudenteRepository, StudenteRepository>();
