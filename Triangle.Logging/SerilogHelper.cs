@@ -10,8 +10,17 @@ using Serilog.Enrichers.AspnetcoreHttpcontext;
 
 namespace Triangle.Logging
 {
+    /// <summary>
+    /// Serillogger Helper
+    /// </summary>
     public static class SerilogHelper
     {
+        /// <summary>
+        /// WithTriangleSerilogConfiguration used in Programmer.cs File in API/Client/Identity
+        /// </summary>
+        /// <param name="loggerConfig"></param>
+        /// <param name="provider"></param>
+        /// <param name="config"></param>
         public static void WithTriangleSerilogConfiguration(this LoggerConfiguration loggerConfig, IServiceProvider provider, IConfiguration config)
         {
             var elasticsearchUri = config["Logging:ElasticsearchUri"];
@@ -31,18 +40,23 @@ namespace Triangle.Logging
                 
         }
 
-        private static ContextInformation GetContextInfo(IHttpContextAccessor hca)
+        /// <summary>
+        /// Get ContextInfor
+        /// </summary>
+        /// <param name="hca"></param>
+        /// <returns></returns>
+        private static ContextInformation GetContextInfo(IHttpContextAccessor httpContextAccessor)
         {
-            var ctx = hca.HttpContext;
-            if (ctx == null) return null;
+            var httpContext = httpContextAccessor.HttpContext;
+            if (httpContext == null) return null;
 
             return new ContextInformation
             {
-                RemoteIpAddress = ctx.Connection.RemoteIpAddress.ToString(),
-                Host = ctx.Request.Host.ToString(),
-                Method = ctx.Request.Method,
-                Protocol = ctx.Request.Protocol,
-                UserInfo = GetUserInfo(ctx.User),
+                RemoteIpAddress = httpContext.Connection.RemoteIpAddress.ToString(),
+                Host = httpContext.Request.Host.ToString(),
+                Method = httpContext.Request.Method,
+                Protocol = httpContext.Request.Protocol,
+                UserInfo = GetUserInfo(httpContext.User),
             };
         }
 
