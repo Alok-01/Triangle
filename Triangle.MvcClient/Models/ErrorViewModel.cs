@@ -7,14 +7,13 @@ namespace Triangle.MvcClient.Models
     /// </summary>
     public class ErrorViewModel
     {
-        /// <summary>
-        /// Request Id
-        /// </summary>
         public string RequestId { get; set; }
+        public string ApiRoute { get; set; }
+        public string ApiStatus { get; set; }
+        public string ApiErrorId { get; set; }
+        public string ApiTitle { get; set; }
+        public string ApiDetail { get; set; }
 
-        /// <summary>
-        /// Show Request Id
-        /// </summary>
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }

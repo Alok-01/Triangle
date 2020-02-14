@@ -13,6 +13,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace Triangle.MvcClient.Controllers
 {
@@ -32,6 +33,7 @@ namespace Triangle.MvcClient.Controllers
 
         public IActionResult Index()
         {
+            Log.Information("Landed on Home page - should be authenticated.");
             return View();
         }
 

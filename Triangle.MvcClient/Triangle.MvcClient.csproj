@@ -13,13 +13,18 @@
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="4.1.1" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.Abstractions" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Triangle.Common\Triangle.Common.csproj" />
+    <ProjectReference Include="..\Triangle.Logging\Triangle.Logging.csproj" />
     <ProjectReference Include="..\Triangle.StudentViewModels\Triangle.StudentViewModels.csproj" />
   </ItemGroup>
 
