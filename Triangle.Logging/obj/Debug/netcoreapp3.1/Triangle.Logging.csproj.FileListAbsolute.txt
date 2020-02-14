@@ -1,0 +1,8 @@
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\bin\Debug\netcoreapp3.1\Triangle.Logging.deps.json
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\bin\Debug\netcoreapp3.1\Triangle.Logging.dll
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\bin\Debug\netcoreapp3.1\Triangle.Logging.pdb
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\obj\Debug\netcoreapp3.1\Triangle.Logging.csprojAssemblyReference.cache
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\obj\Debug\netcoreapp3.1\Triangle.Logging.AssemblyInfoInputs.cache
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\obj\Debug\netcoreapp3.1\Triangle.Logging.AssemblyInfo.cs
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\obj\Debug\netcoreapp3.1\Triangle.Logging.dll
+C:\Users\alok.saxena\Source\Repos\Alok-01\Triangle\Triangle.Logging\obj\Debug\netcoreapp3.1\Triangle.Logging.pdb
