@@ -12,7 +12,7 @@ namespace Triangle.Logging
 {
     public static class SerilogHelper
     {
-        public static void WithWiredBrainConfiguration(this LoggerConfiguration loggerConfig, IServiceProvider provider, IConfiguration config)
+        public static void WithTriangleSerilogConfiguration(this LoggerConfiguration loggerConfig, IServiceProvider provider, IConfiguration config)
         {
             var elasticsearchUri = config["Logging:ElasticsearchUri"];
             var elasticIndexRoot = config["Logging:ElasticIndexFormatRoot"];
