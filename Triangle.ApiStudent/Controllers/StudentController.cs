@@ -5,6 +5,9 @@ using Triangle.StudentModelServicesInterface;
 using Triangle.StudentViewModels;
 using Triangle.Common.CommonModel;
 using System.Threading.Tasks;
+using Serilog;
+using Microsoft.Extensions.Logging;
+using Triangle.Logging;
 
 namespace Triangle.ApiStudent
 {
@@ -15,18 +18,21 @@ namespace Triangle.ApiStudent
     [ApiController]
     public class StudentController : ControllerBase
     {
+        private readonly ILogger<StudentController> _logger;
+
         /// <summary>
         /// Student Model Service
         /// </summary>
         IStudentModelService _studentModelService;
-
+        
         /// <summary>
         /// StudentController
         /// </summary>
         /// <param name="studentModelService">studentModelService </param>
-        public StudentController(IStudentModelService studentModelService)
+        public StudentController(IStudentModelService studentModelService, ILogger<StudentController> logger)
         {
             _studentModelService = studentModelService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -39,6 +45,7 @@ namespace Triangle.ApiStudent
         [HttpPost]
         public async Task<IActionResult> CreateStudent(StudentRegistrationModel vm)
         {
+            Log.Information("Authenticated user making student/secretcreatestudent API call.");
             ResponseModel<StudentRegistrationModel> response;
             if (ModelState.IsValid)
             {
@@ -49,6 +56,7 @@ namespace Triangle.ApiStudent
                 }
                 else
                 {
+                    LogSecurity.Warning("Unauthorized access attempted Create {student}",  vm.StudentName);
                     return BadRequest(response);
                 }
             }

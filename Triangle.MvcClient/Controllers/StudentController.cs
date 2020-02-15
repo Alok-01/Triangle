@@ -1,7 +1,9 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Triangle.Logging;
 using Triangle.MvcClient.Common;
 using Triangle.StudentViewModels;
 
@@ -50,17 +52,25 @@ namespace Triangle.MvcClient.Controllers
                 return View(vm);
             }
 
-            var result = await this.ApiPostAsync(apiPostStudentUri, vm);
-            if (!result.IsSuccessStatusCode)
+            try
             {
-                ViewBag.Name = "Unable to Save At the Moment";
-                return View(vm);
+                var result = await this.ApiPostAsync(apiPostStudentUri, vm);
+                if (!result.IsSuccessStatusCode)
+                {
+                    ViewBag.Name = "Unable to Save At the Moment";
+                    return View(vm);
+                }
+                else
+                {
+                    vm.Message = "Saved!";
+                    return View(vm);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                vm.Message = "Saved!";
-                return View(vm);
-            }            
+                LogSecurity.Warning("Exception on StudentRegistration Post : ", ex.InnerException.ToString());
+            }
+            return View(vm);
         }
 
         /// <summary>

@@ -1,0 +1,22 @@
+﻿Logging Serilog Elastic
+using Serilog.Filters;
+using Serilog.Sinks.Elasticsearch;
+
+//.WriteTo.Logger(lc =>
+                //    lc.Filter.ByExcluding(Matching.WithProperty<bool>("Security", p => p))
+                //        .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(elasticsearchUri))
+                //        {
+                //            AutoRegisterTemplate = true,
+                //            AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
+                //            IndexFormat = elasticIndexRoot + "-{0:yyyy.MM.dd}",
+                //            InlineFields = true
+                //        }))
+                //.WriteTo.Logger(lc =>
+                //    lc.Filter.ByIncludingOnly(Matching.WithProperty<bool>("Security", p => p))
+                //        .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(elasticsearchUri))
+                //        {
+                //            AutoRegisterTemplate = true,
+                //            AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
+                //            IndexFormat = "security-{0:yyyy.MM.dd}",
+                //            InlineFields = true
+                //        }));

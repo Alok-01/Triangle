@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
@@ -23,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Triangle.Common\Triangle.Common.csproj" />
+    <ProjectReference Include="..\Triangle.Logging\Triangle.Logging.csproj" />
     <ProjectReference Include="..\Triangle.StudentEntitiesInterface\Triangle.StudentEntitiesInterface.csproj" />
     <ProjectReference Include="..\Triangle.StudentEntities\Triangle.StudentEntities.csproj" />
     <ProjectReference Include="..\Triangle.StudentModelServicesInterface\Triangle.StudentModelServicesInterface.csproj" />
