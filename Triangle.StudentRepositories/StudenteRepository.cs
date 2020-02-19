@@ -32,7 +32,7 @@ namespace Triangle.StudentRepositories
                         {
                             StudentId = int.Parse(row["StudentId"].ToString(), CultureInfo.InvariantCulture),
                             StudentName = row["StudentName"].ToString(),
-                            StudentRollNumber = row["Name"].ToString(),
+                            StudentRollNumber = row["StudentRollNumber"].ToString(),
                             StudentFatherName = row["StudentFatherName"].ToString(),
                             StudentMotherName = row["StudentMotherName"].ToString()
                         };
