@@ -63,3 +63,16 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentDbAccess\obj\Debug
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.csproj.CopyComplete
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.StudentDbAccess.deps.json
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.StudentDbAccess.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.StudentDbAccess.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.DbManagement.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.csprojAssemblyReference.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.csproj.CopyComplete
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentDbAccess\obj\Debug\netcoreapp3.1\Triangle.StudentDbAccess.pdb

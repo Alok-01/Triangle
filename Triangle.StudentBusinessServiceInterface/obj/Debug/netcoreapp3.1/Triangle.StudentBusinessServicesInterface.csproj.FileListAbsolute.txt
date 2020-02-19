@@ -40,3 +40,14 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentBusinessServiceInt
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.csproj.CopyComplete
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\bin\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.deps.json
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\bin\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\bin\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.csprojAssemblyReference.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.csproj.CopyComplete
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentBusinessServiceInterface\obj\Debug\netcoreapp3.1\Triangle.StudentBusinessServicesInterface.pdb

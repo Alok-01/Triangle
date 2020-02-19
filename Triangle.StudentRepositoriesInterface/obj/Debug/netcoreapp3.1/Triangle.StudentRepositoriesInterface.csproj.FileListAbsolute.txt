@@ -41,3 +41,14 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentRepositoriesInterf
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.csproj.CopyComplete
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.deps.json
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.csprojAssemblyReference.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.csproj.CopyComplete
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentRepositoriesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentRepositoriesInterface.pdb

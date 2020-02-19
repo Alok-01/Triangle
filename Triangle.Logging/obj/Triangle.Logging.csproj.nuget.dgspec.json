@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alok.saxena\\Source\\Repos\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj": {}
+    "D:\\Github\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alok.saxena\\Source\\Repos\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj": {
+    "D:\\Github\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alok.saxena\\Source\\Repos\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj",
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj",
         "projectName": "Triangle.Logging",
-        "projectPath": "C:\\Users\\alok.saxena\\Source\\Repos\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.Logging\\Triangle.Logging.csproj",
         "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alok.saxena\\Source\\Repos\\Alok-01\\Triangle\\Triangle.Logging\\obj\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.Logging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Github\\Alok-01\\Triangle\\API.CompanyEmployees\\CS.API.CompanyEmployees.csproj": {}
+  },
+  "projects": {
+    "D:\\Github\\Alok-01\\Triangle\\API.CompanyEmployees\\CS.API.CompanyEmployees.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\API.CompanyEmployees\\CS.API.CompanyEmployees.csproj",
+        "projectName": "CS.API.CompanyEmployees",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\API.CompanyEmployees\\CS.API.CompanyEmployees.csproj",
+        "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\API.CompanyEmployees\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alok.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj": {
+                "projectPath": "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj"
+              },
+              "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\CS.LoggerService.csproj": {
+                "projectPath": "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\CS.LoggerService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj",
+        "projectName": "CS.Contracts",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj",
+        "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alok.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\CS.LoggerService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\CS.LoggerService.csproj",
+        "projectName": "CS.LoggerService",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\CS.LoggerService.csproj",
+        "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\CS.LoggerService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alok.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj": {
+                "projectPath": "D:\\Github\\Alok-01\\Triangle\\CS.Contracts\\CS.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -42,3 +42,14 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntities\obj\Debug
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.csproj.CopyComplete
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\bin\Debug\netcoreapp3.1\Triangle.StudentEntities.deps.json
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\bin\Debug\netcoreapp3.1\Triangle.StudentEntities.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\bin\Debug\netcoreapp3.1\Triangle.StudentEntities.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.csprojAssemblyReference.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.csproj.CopyComplete
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentEntities\obj\Debug\netcoreapp3.1\Triangle.StudentEntities.pdb

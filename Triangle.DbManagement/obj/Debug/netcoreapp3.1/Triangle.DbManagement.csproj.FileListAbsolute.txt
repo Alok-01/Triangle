@@ -29,3 +29,11 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.DbManagement\obj\Debug\ne
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.AssemblyInfo.cs
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\bin\Debug\netcoreapp3.1\Triangle.DbManagement.deps.json
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\bin\Debug\netcoreapp3.1\Triangle.DbManagement.dll
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\bin\Debug\netcoreapp3.1\Triangle.DbManagement.pdb
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.csprojAssemblyReference.cache
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.dll
+D:\Github\Alok-01\Triangle\Triangle.DbManagement\obj\Debug\netcoreapp3.1\Triangle.DbManagement.pdb

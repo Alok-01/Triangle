@@ -27,3 +27,10 @@ C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntitiesInterface\
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.AssemblyInfo.cs
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
 C:\Users\alok\Downloads\SecureAppServer04-Jan\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.deps.json
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\bin\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.AssemblyInfoInputs.cache
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.AssemblyInfo.cs
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.dll
+D:\Github\Alok-01\Triangle\Triangle.StudentEntitiesInterface\obj\Debug\netcoreapp3.1\Triangle.StudentEntitiesInterface.pdb

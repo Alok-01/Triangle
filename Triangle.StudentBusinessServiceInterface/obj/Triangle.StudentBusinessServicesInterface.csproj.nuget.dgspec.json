@@ -1,41 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj": {}
+    "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj": {
+    "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj",
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj",
         "projectName": "Triangle.StudentBusinessServicesInterface",
-        "projectPath": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj",
-        "packagesPath": "C:\\Users\\alok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentBusinessServiceInterface\\obj\\",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentBusinessServiceInterface\\Triangle.StudentBusinessServicesInterface.csproj",
+        "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentBusinessServiceInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\alok.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\alok\\Desktop\\IdentifyVerificationNew\\IdentifyVerificationNew\\packages\\Microsoft.Extensions.Logging.2.0.0": {},
-          "http://nugetsrvr.azurewebsites.net/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj": {
-                "projectPath": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj"
+              "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj": {
+                "projectPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj"
               }
             }
           }
@@ -67,31 +63,27 @@
         }
       }
     },
-    "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj": {
+    "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj",
+        "projectUniqueName": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj",
         "projectName": "Triangle.StudentEntitiesInterface",
-        "projectPath": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj",
-        "packagesPath": "C:\\Users\\alok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alok\\Downloads\\SecureAppServer04-Jan\\Triangle.StudentEntitiesInterface\\obj\\",
+        "projectPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\Triangle.StudentEntitiesInterface.csproj",
+        "packagesPath": "C:\\Users\\alok.saxena\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Alok-01\\Triangle\\Triangle.StudentEntitiesInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\alok.saxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\alok\\Desktop\\IdentifyVerificationNew\\IdentifyVerificationNew\\packages\\Microsoft.Extensions.Logging.2.0.0": {},
-          "http://nugetsrvr.azurewebsites.net/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
