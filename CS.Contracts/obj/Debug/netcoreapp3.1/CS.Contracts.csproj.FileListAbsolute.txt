@@ -1,8 +1,0 @@
-D:\Github\Alok-01\Triangle\CS.Contracts\bin\Debug\netcoreapp3.1\CS.Contracts.deps.json
-D:\Github\Alok-01\Triangle\CS.Contracts\bin\Debug\netcoreapp3.1\CS.Contracts.dll
-D:\Github\Alok-01\Triangle\CS.Contracts\bin\Debug\netcoreapp3.1\CS.Contracts.pdb
-D:\Github\Alok-01\Triangle\CS.Contracts\obj\Debug\netcoreapp3.1\CS.Contracts.csprojAssemblyReference.cache
-D:\Github\Alok-01\Triangle\CS.Contracts\obj\Debug\netcoreapp3.1\CS.Contracts.AssemblyInfoInputs.cache
-D:\Github\Alok-01\Triangle\CS.Contracts\obj\Debug\netcoreapp3.1\CS.Contracts.AssemblyInfo.cs
-D:\Github\Alok-01\Triangle\CS.Contracts\obj\Debug\netcoreapp3.1\CS.Contracts.dll
-D:\Github\Alok-01\Triangle\CS.Contracts\obj\Debug\netcoreapp3.1\CS.Contracts.pdb
