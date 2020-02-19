@@ -9,7 +9,7 @@ using Serilog.Enrichers.AspnetcoreHttpcontext;
 namespace Triangle.ApiStudent
 {
     /// <summary>
-    /// Program
+    /// Program Class
     /// </summary>
     public class Program
     {
