@@ -19,6 +19,8 @@
 # Mono auto generated files
 mono_crash.*
 
+*.sqlite # Added by Alok for slnx.sqlite
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -95,6 +97,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.cache #added by Alok
 
 # Chutzpah Test files
 _Chutzpah*
