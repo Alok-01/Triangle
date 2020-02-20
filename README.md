@@ -1,6 +1,7 @@
-The Three applicaiton one is webClient (UI), IdentityWebServer & ApiBackend.
+The Three main application one is web Client (UI), Identity Webserver & API Backend.
 
-Project : Only a Sample Domain i.e. Student Registration Form with only Authroization & Authenciate
+
+Project: A Sample Domain i.e. Student Registration Form with Authorization & Authenticate
 
 The Technology:
 
@@ -9,27 +10,27 @@ Identity Server 4 => Sql Server DB Level
 .Net Core 3.1 MVC
 .Net Core 3.1 WebApi
 
-Deisgn :
+Design:
 1) SOLID Principal
 2) Static
-3) Onion Archiecture
+3) Onion Architecture
 4) Domain Based Design
-5) Microservices Architure [A thin layer of MSA applied]
+5) Micro services Architecture [A thin layer of MSA applied]
 6) CQRS Implementation in Triangle.ApiStudent.StudentMediatRController.cs
+7) XUnit Project
 
 Current Application
 1) Code Complexity at moment 85%
 2) Clean Code
-3) SOLID Implemnetaion 
-
+3) SOLID Implementation 
 
 
 
 Future:
 A) Complete  Microservices Archiecture Implementation
-B) A big UI approvemnt  
+B) A UI approvemnt  
 
 =================================================================================================================
 Note: 
 UI is not good at the moment.
-Unit Testing not running at momenet due to VS update, I need to check it.
+
