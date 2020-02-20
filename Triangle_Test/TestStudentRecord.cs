@@ -15,12 +15,16 @@ namespace Triangle_Test
         {
             // arrange
             Mock<IStudenteRepository> mockEmployeeRepository = new Mock<IStudenteRepository>();
-            var mockstudent = new List<IStudentEntity>();
+            List<IStudentEntity> mockstudent = new List<IStudentEntity>
+            {
+                
+                new StudentEntity { StudentId = 1, StudentRollNumber = "B10", StudentName = "John", StudentFatherName = "Paul", StudentMotherName = "Lena" },
+                new StudentEntity { StudentId = 2, StudentRollNumber = "C10", StudentName = "Jack", StudentFatherName = "Pundit", StudentMotherName = "Kaul" }
+            };
+            
             //act
-            mockstudent.Add(new StudentEntity { StudentId = 1, StudentRollNumber = "B10", StudentName = "John", StudentFatherName = "Paul", StudentMotherName = "Lena" });
-            mockstudent.Add(new StudentEntity { StudentId = 1, StudentRollNumber = "C10", StudentName = "Jack", StudentFatherName = "Pundit", StudentMotherName = "Kaul" });
-            // assert
             var abc = mockEmployeeRepository.Setup(s => s.GetAllStudentList()).Returns(mockstudent);
+            // assert
             Assert.AreEqual(2, mockstudent.Count);
             
         }

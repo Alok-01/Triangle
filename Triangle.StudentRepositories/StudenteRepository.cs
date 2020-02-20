@@ -21,7 +21,7 @@ namespace Triangle.StudentRepositories
         //public async Task<IList<IStudentEntity>> GetAllStudentList()
         public List<IStudentEntity> GetAllStudentList()
         {
-            List<IStudentEntity> studentEntities  = new List<IStudentEntity>();
+            List<IStudentEntity> studentEntities = new List<IStudentEntity>();
             using (var dataTransfer = StudentDbService.FetchAllStudents())
             {
                 if (dataTransfer.Table.Rows.Count > 0)
@@ -52,8 +52,36 @@ namespace Triangle.StudentRepositories
         //public int CreateStudent(IStudentEntity studentEntity)
         public async Task<IStudentEntity> CreateStudent(IStudentEntity studentEntity)
         {
-            var result =  StudentDbService.InsertUpdate(studentEntity);
+            var result = StudentDbService.InsertUpdate(studentEntity);
             return result;
+        }
+
+        public IStudentEntity GetStudentById(int studentId)
+        //public async Task<IStudentEntity> GetStudentById(int studentId)
+        {
+            if (studentId <= 0) return null;
+
+            using (var dataTransfer = StudentDbService.FetchStudentByStudentId(studentId))
+            {
+                if (dataTransfer.Table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTransfer.Table.Rows)
+                    {
+                        var temp = new StudentEntity
+                        {
+                            StudentId = int.Parse(row["StudentId"].ToString(), CultureInfo.InvariantCulture),
+                            StudentName = row["StudentName"].ToString(),
+                            StudentRollNumber = row["StudentRollNumber"].ToString(),
+                            StudentFatherName = row["StudentFatherName"].ToString(),
+                            StudentMotherName = row["StudentMotherName"].ToString()
+                        };
+
+                        return temp;
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }

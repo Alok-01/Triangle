@@ -61,5 +61,29 @@ namespace Triangle.StudentDbAccess
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Fetch Student By StudentId
+        /// </summary>
+        /// <param name="studentId">Student Id</param>
+        /// <returns>Return student data table</returns>
+        public static TransferableDataTable FetchStudentByStudentId(int studentId)
+        {
+            try
+            {
+                using (var comm = GenericDataAccess.CreateCommand(Connections.Configuration.StudentV4Db))
+                {
+                    comm.CommandText = "dbo.Student__FetchByStudentId";
+                    comm.AddParamWithValue("@StudentId", DbType.Int32, studentId);
+                    var result = GenericDataAccess.ExecuteSelectCommand(comm);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                DataErrorLogger.LogError(ex);
+                throw ex;
+            }
+        }
     }
 }

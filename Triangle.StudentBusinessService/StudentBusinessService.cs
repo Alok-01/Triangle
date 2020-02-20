@@ -11,7 +11,7 @@ namespace Triangle.StudentBusinessServices
     /// </summary>
     public class StudentBusinessService : IStudentBusinessService
     {
-        private  IStudenteRepository _studenteRepository;
+        private readonly IStudenteRepository _studenteRepository;
 
         /// <summary>
         /// Constructor StudentBusinessService
@@ -28,8 +28,20 @@ namespace Triangle.StudentBusinessServices
         /// <returns>Student Entity List</returns>
         public IList<IStudentEntity> GetAllStudentList()
         {
-            var loanChargeTypeList = _studenteRepository.GetAllStudentList();
-            return loanChargeTypeList;
+            var lstStudent = _studenteRepository.GetAllStudentList();
+            return lstStudent;
+        }
+
+        /// <summary>
+        /// Get Student by id
+        /// </summary>
+        /// <param name="studentId">Student Id</param>
+        /// <returns>Return Student id</returns>
+        //public async Task<IStudentEntity> GetStudentById(int studentId)
+        public IStudentEntity GetStudentById(int studentId)
+        {
+            var studentEntity = _studenteRepository.GetStudentById(studentId);
+            return studentEntity;
         }
 
         /// <summary>
