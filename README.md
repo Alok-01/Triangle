@@ -13,7 +13,7 @@ Identity Server 4 => Sql Server DB Level
 How To Run?
 1) Create DB 
     a) TriangleIdentityServer
-       Open the TriangleIdentityServerDb_Table_ScriptWithData and and Excute the Script in Student Database
+       Open the TriangleIdentityServerDb_Table_ScriptWithData and and Excute the Script in TriangleIdentityServer Database
     b) Student
        Open the StudentDB_Table_SP_ScriptWithData.sql and Excute the Script in Student Database
 
