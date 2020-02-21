@@ -1,10 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Triangle.ApiStudent",
+    "\\Student_Test",
+    "\\Triangle.IdentityWebServer",
+    "\\Triangle.MvcClient",
+    "\\Triangle.MvcClient\\Common",
+    "\\Triangle.MvcClient\\Controllers",
+    "\\Triangle.SPA",
     "\\Triangle.StudentBusinessService",
-    "\\Triangle.StudentDbAccess"
+    "\\Triangle.StudentBusinessServiceInterface",
+    "\\Triangle.StudentRepositoriesInterface"
   ],
-  "SelectedNode": "\\Triangle.StudentBusinessService\\Triangle.StudentBusinessServices.csproj",
+  "SelectedNode": "\\Triangle.MvcClient\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
