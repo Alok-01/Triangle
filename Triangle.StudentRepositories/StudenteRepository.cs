@@ -83,5 +83,39 @@ namespace Triangle.StudentRepositories
 
             return null;
         }
+
+        /// <summary>
+        /// Get AllStudentList With Paging Sorting
+        /// </summary>
+        /// <param name="searchValue">searchValue</param>
+        /// <param name="pageNo">page No</param>
+        /// <param name="pageSize">page Size</param>
+        /// <param name="sortColumn">sort Column</param>
+        /// <param name="sortOrder">sort Order</param>
+        /// <returns>Student data table</returns>
+        public List<IStudentEntity> GetAllStudentListWithPaging_Sorting(string searchValue, int pageNo, int pageSize, string sortColumn, string sortOrder)
+        {
+            List<IStudentEntity> studentEntities = new List<IStudentEntity>();
+            using (var dataTransfer = StudentDbService.FetchAllStudents())
+            {
+                if (dataTransfer.Table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTransfer.Table.Rows)
+                    {
+                        var temp = new StudentEntity
+                        {
+                            StudentId = int.Parse(row["StudentId"].ToString(), CultureInfo.InvariantCulture),
+                            StudentName = row["StudentName"].ToString(),
+                            StudentRollNumber = row["StudentRollNumber"].ToString(),
+                            StudentFatherName = row["StudentFatherName"].ToString(),
+                            StudentMotherName = row["StudentMotherName"].ToString()
+                        };
+
+                        studentEntities.Add(temp);
+                    }
+                }
+            }
+            return studentEntities;
+        }
     }
 }

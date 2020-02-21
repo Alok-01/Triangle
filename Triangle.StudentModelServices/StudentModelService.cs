@@ -85,5 +85,35 @@ namespace Triangle.StudentModelServices
 
             return returnResponse;
         }
+
+        /// <summary>
+        /// Get AllStudentList With Paging Sorting
+        /// </summary>
+        /// <param name="searchValue">searchValue</param>
+        /// <param name="pageNo">page No</param>
+        /// <param name="pageSize">page Size</param>
+        /// <param name="sortColumn">sort Column</param>
+        /// <param name="sortOrder">sort Order</param>
+        /// <returns>Student data table</returns>
+        public List<StudentRegistrationModel> GetAllStudentListWithPaging_Sorting(string searchValue, int pageNo, int pageSize, string sortColumn, string sortOrder)
+        {
+            List<StudentRegistrationModel> returnResponse = new List<StudentRegistrationModel>();
+            var lstStudent = _studentBusinessService.GetAllStudentListWithPaging_Sorting(searchValue, pageNo, pageSize, sortColumn, sortOrder);
+
+            foreach (var item in lstStudent)
+            {
+                var temp = new StudentRegistrationModel
+                {
+                    StudentId = item.StudentId,
+                    StudentName = item.StudentName,
+                    StudentFatherName = item.StudentFatherName,
+                    StudentMotherName = item.StudentMotherName,
+                    StudentRollNumber = item.StudentRollNumber
+                };
+                returnResponse.Add(temp);
+            }
+
+            return returnResponse;
+        }
     }
 }

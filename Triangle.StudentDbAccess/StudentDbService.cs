@@ -85,5 +85,37 @@ namespace Triangle.StudentDbAccess
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// FetchAllStudents With Paging Sorting
+        /// </summary>
+        /// <param name="searchValue">searchValue</param>
+        /// <param name="pageNo">page No</param>
+        /// <param name="pageSize">page Size</param>
+        /// <param name="sortColumn">sort Column</param>
+        /// <param name="sortOrder">sort Order</param>
+        /// <returns>Student data table</returns>
+        public static TransferableDataTable FetchAllStudentsWithPaging_Sorting(string searchValue, int pageNo, int pageSize, string sortColumn,string sortOrder)
+        {
+            try
+            {
+                using (var comm = GenericDataAccess.CreateCommand(Connections.Configuration.StudentV4Db))
+                {
+                    comm.CommandText = "dbo.Student__FetchAll_Paging";
+                    comm.AddParamWithValue("@SearchValue", DbType.String, searchValue);
+                    comm.AddParamWithValue("@PageNo", DbType.Int32, pageNo);
+                    comm.AddParamWithValue("@PageSize", DbType.Int32, pageSize);
+                    comm.AddParamWithValue("@SortColumn", DbType.String, sortColumn);
+                    comm.AddParamWithValue("@SortOrder", DbType.String, sortOrder);
+                    var result = GenericDataAccess.ExecuteSelectCommand(comm);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                DataErrorLogger.LogError(ex);
+                throw ex;
+            }
+        }
     }
 }
