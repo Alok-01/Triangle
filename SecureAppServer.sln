@@ -53,7 +53,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.LoggerService", "CS.Logg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triangle.Logging", "Triangle.Logging\Triangle.Logging.csproj", "{A22D4C83-B91A-4366-9CC6-AF3D6660B8BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student_Test", "Student_Test\Student_Test.csproj", "{033A9624-4A9E-42A2-B62A-9980182D2BC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student_Test", "Student_Test\Student_Test.csproj", "{033A9624-4A9E-42A2-B62A-9980182D2BC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Application Notes", "Building Application Notes", "{66326CCD-B877-491D-8D27-C8A25F6B72FA}"
+	ProjectSection(SolutionItems) = preProject
+		Implementation REST.txt = Implementation REST.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

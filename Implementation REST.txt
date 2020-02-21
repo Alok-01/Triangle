@@ -1,0 +1,31 @@
+While Buliding API, need work on following points. 
+This is not required to implement everything, based on feature and project demand.
+However Any Archiecture should keep these things
+
+1) Uniform Interface Constraint
+API and consumer share one single interface :
+a) URI (Resorce Identifier)
+b) HTTP Method
+c) Media Type [Payload]
+
+Resource Identification: it mean that individual resource are identified in 
+request using URIs.
+
+HATEOAS (Hypermedia as the Engine of Application state): Allows 
+for a self documententing API
+
+Cacheable Constriant: Each response message must explicity state that if 
+it can be cached or not
+
+Paging Through Collection Resources
+
+Deferred Execution: Means that the query vairable itself never holds the
+query results and only stores the query commands. Execution of the query 
+is deferred until the query variable is iterated over.
+So deferred execution means that query execution occurs sometime after the
+query is constructed. We can get this behavior by working with IQueryable
+implementing collections. IQueryable of T allows us to execute a query against
+a specific data source and while building upon it, it creates an expression 
+tree that those query commands. But query itself isnot actually sent to the
+datastore until iteration happens. e.g. foreach loop, ToList(), ToArray(),ToCount()
+
