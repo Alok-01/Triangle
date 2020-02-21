@@ -9,6 +9,7 @@ using Serilog;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using System;
 
 namespace Triangle.MvcClient
 {
@@ -68,7 +69,12 @@ namespace Triangle.MvcClient
                 });
             services.AddMediatR(typeof(Startup));
             services.AddHttpContextAccessor();
-            services.AddHttpClient();
+            //services.AddHttpClient();
+            services.AddHttpClient("StudentApiClient",client => {
+                client.BaseAddress = new Uri("https://localhost:44345");
+                client.Timeout = new TimeSpan(0, 0, 30);
+                client.DefaultRequestHeaders.Clear();
+            });
             //services.AddControllersWithViews();
             //Let See on 14-Feb2020 Below
             services.AddControllersWithViews(options =>

@@ -15,7 +15,8 @@ namespace Triangle.MvcClient.Controllers
 
         //Note Ideally url come from appsetting.json or database
         private static string apiGetStudentUri = "https://localhost:44345/student/getstudent?id="; // Triangle.ApiStudent = ApiOne
-        private static string apiPostStudentUri = "https://localhost:44345/student/secretcreatestudent"; // Triangle.ApiStudent = ApiOne
+        //private static string apiPostStudentUri = "https://localhost:44345/student/secretcreatestudent"; // Triangle.ApiStudent = ApiOne
+        private static string apiPostStudentUri = "/student/secretcreatestudent"; // Triangle.ApiStudent = ApiOne
 
         /// <summary>
         /// Student Controller
@@ -54,7 +55,7 @@ namespace Triangle.MvcClient.Controllers
 
             try
             {
-                var result = await this.ApiPostAsync(apiPostStudentUri, vm);
+                var result = await this.ApiPostAsync(apiPostStudentUri, vm, "StudentApiClient");
                 if (!result.IsSuccessStatusCode)
                 {
                     ViewBag.Name = "Unable to Save At the Moment";
@@ -62,7 +63,7 @@ namespace Triangle.MvcClient.Controllers
                 }
                 else
                 {
-                    vm.Message = "Saved!";
+                    ViewBag.Name = "Saved!";
                     return View(vm);
                 }
             }

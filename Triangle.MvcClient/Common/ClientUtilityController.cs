@@ -14,27 +14,27 @@ namespace Triangle.MvcClient.Common
     public class ClientUtilityController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-                
+
         public ClientUtilityController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
 
-       
+
         public async Task<string> GenerateAccessToken()
         {
             var access_token = await HttpContext.GetTokenAsync("access_token");
             return access_token;
         }
 
-       
-        public async Task<HttpResponseMessage> ApiPostAsync(string uri, object vm)
+
+        public async Task<HttpResponseMessage> ApiPostAsync(string uri, object vm, string nameInstance)
         {
             var accessToken = await this.GenerateAccessToken();
-            var apiOneClient = _httpClientFactory.CreateClient();
+            var apiOneClient = _httpClientFactory.CreateClient(nameInstance);
             //var request = new HttpRequestMessage(HttpMethod.Post, uri);
             //request.Content = new StringContent(JsonConvert.SerializeObject(vm), Encoding.UTF8, "application/json");
-          
+
             apiOneClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             apiOneClient.DefaultRequestHeaders.Accept.Clear();
             apiOneClient.SetBearerToken(accessToken);
@@ -54,10 +54,10 @@ namespace Triangle.MvcClient.Common
         {
             var accessToken = await this.GenerateAccessToken();
             var apiOneClient = _httpClientFactory.CreateClient();
-            
+
             apiOneClient.SetBearerToken(accessToken);
             var response = await apiOneClient.GetAsync(uri);
-            
+
             return response;
         }
 
