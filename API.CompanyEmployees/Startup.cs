@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CS.API.CompanyEmployees.Extensions;
+using CS.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -33,18 +35,24 @@ namespace CS.API.CompanyEmployees
             services.ConfigureCors();
             services.ConfigureIISIntegration();
             services.ConfigureLoggerService();
-
-            services.AddControllers();
+            services.ConfigureSqlContext(Configuration);
+            services.ConfigureRepositoryManager();
+            services.AddAutoMapper(typeof(Startup));
+            //services.AddControllers();
+            services.AddControllers(config => { 
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true; //if the client tries to negotiate for the media type the server doesn’t support, it should return the 406 Not Acceptable status code.
+            }).AddXmlDataContractSerializerFormatters().AddCustomCSVFormatter(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerManager logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.ConfigureExceptionHandler(logger);
             app.UseHttpsRedirection();
 
             app.UseStaticFiles();
