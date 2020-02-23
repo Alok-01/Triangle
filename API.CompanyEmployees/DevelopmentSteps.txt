@@ -44,3 +44,9 @@ In a system that is designed around DI, you may find many classes requesting the
 In this case, it is helpful to have a class that manages and provides dependencies to classes through the constructor.
 These classes are referred to as containers or more specifically, Inversion of Control containers. 
 An IoC container is essentially a factory that is responsible for providing instances of the types that are requested from it.
+
+Knowledge-5
+HTTPPUT : Additional note: As you can see, we have changed only the Age property, but we have sent all the other properties 
+with unchanged values as well. Therefore, Age is only updated in the database. But if we send the object with just the Age property, 
+without the other properties, those other properties will be set to their default values and the whole object will be updated — not just the Age column. 
+That’s because the PUT is a request for a full update. This is very important to know.

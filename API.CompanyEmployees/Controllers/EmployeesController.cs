@@ -108,5 +108,32 @@ namespace CS.API.CompanyEmployees.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}")]
+        public IActionResult UpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] EmployeeForUpdateDto employee)
+        {
+            if (employee == null)
+            {
+                _logger.LogError("EmployeeForUpdateDto object sent from client is null.");
+                return BadRequest("EmployeeForUpdateDto object is null");
+            }
+            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            if (company == null)
+            {
+                _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
+                return NotFound();
+            }
+            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+            //The trackChanges parameter is set to true for the employeeEntity. That’s because we want EF Core to track changes on this entity. 
+            //This means that as soon as we change any property in this entity, EF Core will set the state of that entity to Modified
+            if (employeeEntity == null)
+            {
+                _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            _mapper.Map(employee, employeeEntity);
+            _repository.Save();
+            return NoContent();
+        }
+
     }
 }
