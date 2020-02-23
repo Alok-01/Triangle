@@ -46,7 +46,73 @@ These classes are referred to as containers or more specifically, Inversion of C
 An IoC container is essentially a factory that is responsible for providing instances of the types that are requested from it.
 
 Knowledge-5
-HTTPPUT : Additional note: As you can see, we have changed only the Age property, but we have sent all the other properties 
+1) HTTPPUT : Additional note: As you can see, we have changed only the Age property, but we have sent all the other properties 
 with unchanged values as well. Therefore, Age is only updated in the database. But if we send the object with just the Age property, 
 without the other properties, those other properties will be set to their default values and the whole object will be updated — not just the Age column. 
 That’s because the PUT is a request for a full update. This is very important to know.
+2) HTTPPATCH : The partial update isn’t the only difference between PATCH and PUT. The request body is different as well. 
+For the Company PATCH request, for example, we should use [FromBody]JsonPatchDocument<Company> and not [FromBody]Company  as we did with the PUT requests.
+Additionally, for the PUT request’s media type, we have used application/json — but for the PATCH request’s media type,
+we should use application/json-patch+json. Even though the first one would be accepted in ASP.NET Core for the PATCH request, the recommendation 
+by REST standards is to use the second one.
+the PATCH request body looks like:
+[ 
+    { 
+    "op": "replace", 
+    "path": "/name", 
+    "value": "new name" 
+    }, 
+    { 
+    "op": "remove", 
+    "path": "/name" 
+    } 
+]
+The square brackets represent an array of operations. Every operation is placed between curly brackets. So, in this specific example, 
+we have two operations: Replace and Remove represented by the op property. The path property represents the object’s property that
+we want to modify and the value property represents a new value.
+
+The Microsoft.AspNetCore.JsonPatch library to support the usage of JsonPatchDocument in our controller and
+The Microsoft.AspNetCore.Mvc.NewtonsoftJson library to support request body conversion to a PatchDocument once we send our request.
+
+Once the installation is completed, we have to add the NewtonsoftJson configuration to IServiceCollection:
+services.AddControllers(config => 
+{ 
+config.RespectBrowserAcceptHeader = true; 
+config.ReturnHttpNotAcceptable = true; 
+config.OutputFormatters.Add(new CsvOutputFormatter()); 
+})
+.AddNewtonsoftJson() //// ******Add this*****
+.AddXmlDataContractSerializerFormatters() 
+.AddCustomCSVFormatter();
+
+3) Example of Patch
+https://localhost:5001/api/companies/3d490a70-94ce-4d15-9494-5248280c2ce3
+
+--For Patch
+
+--https://localhost:5001/api/companies/C9D4C053-49B6-410C-BC78-2D54A9991870/employees/80ABBCA8-664D-4B20-B5DE-024705497D4A
+--Replace
+--[
+--	{
+--"op": "replace",
+--"path" : "/age",
+--"value": "45"
+--	}
+--]
+
+--Remove
+--[
+--	{
+--"op": "remove",
+--"path" : "/age"
+--	}
+--]
+
+-- Add
+--[
+--	{
+--"op": "add",
+--"path" : "/age",
+--"value" : 75
+--	}
+--]

@@ -39,10 +39,17 @@ namespace CS.API.CompanyEmployees
             services.ConfigureRepositoryManager();
             services.AddAutoMapper(typeof(Startup));
             //services.AddControllers();
-            services.AddControllers(config => { 
+            services.AddControllers(config =>
+            {
                 config.RespectBrowserAcceptHeader = true;
-                config.ReturnHttpNotAcceptable = true; //if the client tries to negotiate for the media type the server doesn’t support, it should return the 406 Not Acceptable status code.
-            }).AddXmlDataContractSerializerFormatters().AddCustomCSVFormatter(); 
+                //if the client tries to negotiate for the media type the server doesn’t support,
+                //it should return the 406 Not Acceptable status code.
+                config.ReturnHttpNotAcceptable = true; 
+                config.OutputFormatters.Add(new CsvOutputFormatter());
+            })
+            .AddNewtonsoftJson()
+            .AddXmlDataContractSerializerFormatters()
+            .AddCustomCSVFormatter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
