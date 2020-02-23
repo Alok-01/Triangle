@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using CS.API.CompanyEmployees.CustomActionFilters;
 using CS.API.CompanyEmployees.Extensions;
 using CS.Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -38,7 +39,9 @@ namespace CS.API.CompanyEmployees
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
             services.AddAutoMapper(typeof(Startup));
-
+            services.AddScoped<ValidationFilterAttribute>();
+            services.AddScoped<ValidateCompanyExistsAttribute>();
+            services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
