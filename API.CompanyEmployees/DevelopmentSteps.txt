@@ -116,3 +116,12 @@ https://localhost:5001/api/companies/3d490a70-94ce-4d15-9494-5248280c2ce3
 --"value" : 75
 --	}
 --]
+
+Knowledge-6
+
+1) Error Code 422 Unprocessable Entity. That means that the server understood the content type of the request and the syntax 
+of the request entity is correct, but it was unable to process validation rules applied on the entity inside the request body.
+When validation rules have been applied, the status code for this response is 400 Bad Request. That is acceptable BUT
+status code that better fits this kind of situation. It is 422 Unprocessable Entity.
+To return 422 instead of 400, the first thing we have to do is to suppress the BadRequest error when the ModelState is invalid. 
+Adding this code into the Startup class in the ConfigureServices method:

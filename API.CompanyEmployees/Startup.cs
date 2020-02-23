@@ -38,13 +38,19 @@ namespace CS.API.CompanyEmployees
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
             services.AddAutoMapper(typeof(Startup));
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
+            });
+
             //services.AddControllers();
             services.AddControllers(config =>
             {
                 config.RespectBrowserAcceptHeader = true;
                 //if the client tries to negotiate for the media type the server doesn’t support,
                 //it should return the 406 Not Acceptable status code.
-                config.ReturnHttpNotAcceptable = true; 
+                config.ReturnHttpNotAcceptable = true;
                 config.OutputFormatters.Add(new CsvOutputFormatter());
             })
             .AddNewtonsoftJson()

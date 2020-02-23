@@ -65,6 +65,11 @@ namespace CS.API.CompanyEmployees.Controllers
                 return BadRequest("CompanyForCreationDto object is null");
             }
 
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the EmployeeForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
 
             var companyEntity = _mapper.Map<Company>(company);
             _repository.Company.CreateCompany(companyEntity);
@@ -109,6 +114,12 @@ namespace CS.API.CompanyEmployees.Controllers
                 return BadRequest("Company collection is null");
             }
 
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CompanyForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
+
             var companyEntities = _mapper.Map<IEnumerable<Company>>(companyCollection);
 
             foreach (var company in companyEntities)
@@ -147,13 +158,22 @@ namespace CS.API.CompanyEmployees.Controllers
                 _logger.LogError("CompanyForUpdateDto object sent from client is null.");
                 return BadRequest("CompanyForUpdateDto object is null");
             }
-            var companyEntity = _repository.Company.GetCompany(id, trackChanges: true); if (companyEntity == null)
+
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CompanyForUpdateDto object");
+                return UnprocessableEntity(ModelState);
+            }
+            
+            var companyEntity = _repository.Company.GetCompany(id, trackChanges: true); 
+            
+            if (companyEntity == null)
             {
                 _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
-            _mapper.Map(company, companyEntity); 
-            _repository.Save(); 
+            _mapper.Map(company, companyEntity);
+            _repository.Save();
             return NoContent();
         }
     }
