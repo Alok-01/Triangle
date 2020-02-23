@@ -19,7 +19,13 @@ namespace CS.Repository
 
         public void CreateEmployeeForCompany(Guid companyId, Employee employee)
         {
-            employee.CompanyId = companyId; Create(employee);
+            employee.CompanyId = companyId; 
+            Create(employee);
+        }
+
+        public void DeleteEmployee(Employee employee)
+        {
+            Delete(employee);
         }
     }
 }
