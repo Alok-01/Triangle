@@ -125,3 +125,30 @@ When validation rules have been applied, the status code for this response is 40
 status code that better fits this kind of situation. It is 422 Unprocessable Entity.
 To return 422 instead of 400, the first thing we have to do is to suppress the BadRequest error when the ModelState is invalid. 
 Adding this code into the Startup class in the ConfigureServices method:
+
+Knowledge-7
+
+1) Async programming
+Async programming is a parallel programming technique which allows the working process to run separately from the main application
+thread. As soon as the work completes, it informs the main thread about the result whether it was successful or not.
+By using async programming, we can avoid performance bottlenecks and enhance the responsiveness of our application.
+
+Because we are not sending requests to the main thread and blocking it while waiting for the responses anymore (as long as it takes).
+Now, when we send a request to the main thread, it delegates a job to a background thread — thus freeing itself for another request. 
+Eventually, a background thread finishes its job and returns it to the main thread. Then the main thread returns the result to the 
+requester.
+So, if we send a request to an endpoint and it takes the application three or more seconds to process that request, we probably 
+won’t be able to execute this request any faster in async mode. It is going to take the same amount of time as the sync request.
+The only advantage is that in async mode the main thread won’t be blocked three or more seconds; thus, it will be able to process 
+other requests.
+
+2) Async, Await & Return Types
+The async and await keywords play a crucial part in asynchronous programming. By using those keywords, we can easily write 
+asynchronous methods without too much effort.
+In asynchronous programming, we have three return types: 
+a) Task<TResult>, for an async method that returns a value. 
+b) Task, for an async method that does not return a value. 
+c) void, which we can use for an event handler.
+But if our sync method returns no value (has a void for the return type), then our async method should return Task.
+This means that we can use the await keyword inside that method, but without the return keyword.
+From C# 7.0 onward, we can specify any other return type if that type includes a GetAwaiter method.
