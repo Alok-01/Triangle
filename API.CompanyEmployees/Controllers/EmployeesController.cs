@@ -34,7 +34,13 @@ namespace CS.API.CompanyEmployees.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
         {
+            if (!employeeParameters.ValidAgeRange)
+            {
+                return BadRequest("Max age can't be less than min age.");
+            }
+
             var company = _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
+
             if (company == null)
             {
                 _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
@@ -44,8 +50,8 @@ namespace CS.API.CompanyEmployees.Controllers
             var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false, employeeParameters);
 
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(employeesFromDb.MetaData));
-            
-                var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
+
+            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
 
             return Ok(employeesDto);
         }
@@ -53,14 +59,14 @@ namespace CS.API.CompanyEmployees.Controllers
         [HttpGet("{id}", Name = "GetEmployeeForCompany")]
         public async Task<IActionResult> GetEmployeeForCompany(Guid companyId, Guid id)
         {
-            var company = await  _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
             if (company == null)
             {
                 _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database."); return NotFound();
             }
 
             var employeeDb = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
-            
+
             if (employeeDb == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database."); return NotFound();
@@ -150,7 +156,7 @@ namespace CS.API.CompanyEmployees.Controllers
             //var employeeEntity = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: true);
             //The trackChanges parameter is set to true for the employeeEntity. That’s because we want EF Core to track changes on this entity. 
             //This means that as soon as we change any property in this entity, EF Core will set the state of that entity to Modified
-            
+
             var employeeEntity = HttpContext.Items["employee"] as Employee;
 
             if (employeeEntity == null)
