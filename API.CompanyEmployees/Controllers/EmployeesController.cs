@@ -7,9 +7,11 @@ using CS.API.CompanyEmployees.CustomActionFilters;
 using CS.Contracts;
 using CS.Entities.DataTransferObjects;
 using CS.Entities.Models;
+using CS.Entities.RequestFeatures;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace CS.API.CompanyEmployees.Controllers
 {
@@ -30,7 +32,7 @@ namespace CS.API.CompanyEmployees.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetEmployeesForCompany(Guid companyId)
+        public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
         {
             var company = _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
             if (company == null)
@@ -39,9 +41,11 @@ namespace CS.API.CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false);
+            var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false, employeeParameters);
 
-            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(employeesFromDb.MetaData));
+            
+                var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
 
             return Ok(employeesDto);
         }
@@ -54,8 +58,9 @@ namespace CS.API.CompanyEmployees.Controllers
             {
                 _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database."); return NotFound();
             }
-            var employeeDb = _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
 
+            var employeeDb = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
+            
             if (employeeDb == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database."); return NotFound();
