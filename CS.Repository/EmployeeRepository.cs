@@ -2,6 +2,7 @@
 using CS.Entities;
 using CS.Entities.Models;
 using CS.Entities.RequestFeatures;
+using CS.Repository.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,9 @@ namespace CS.Repository
         public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges, EmployeeParameters employeeParameters)
         {
             var employeeList = await FindByCondition(e =>
-            e.CompanyId.Equals(companyId) && e.Age >= employeeParameters.MinAge && e.Age <= employeeParameters.MaxAge, trackChanges)
+            e.CompanyId.Equals(companyId), trackChanges)
+                .FilterEmployees(employeeParameters.MinAge,employeeParameters.MaxAge)
+                .Search(employeeParameters.SearchTerm)
                 .OrderBy(e => e.Name)
                 .ToListAsync();
 
@@ -29,6 +32,18 @@ namespace CS.Repository
                 employeeList, employeeParameters.PageNumber, employeeParameters.PageSize
                 );
         }
+
+        //public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges, EmployeeParameters employeeParameters)
+        //{
+        //    var employeeList = await FindByCondition(e =>
+        //    e.CompanyId.Equals(companyId) && e.Age >= employeeParameters.MinAge && e.Age <= employeeParameters.MaxAge, trackChanges)
+        //        .OrderBy(e => e.Name)
+        //        .ToListAsync();
+
+        //    return PagedList<Employee>.ToPagedList(
+        //        employeeList, employeeParameters.PageNumber, employeeParameters.PageSize
+        //        );
+        //}
 
         //public async Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges, EmployeeParameters employeeParameters) =>
         //    await FindByCondition(e =>
