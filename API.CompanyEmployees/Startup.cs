@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreRateLimit;
 using AutoMapper;
 using CS.API.CompanyEmployees.CustomActionFilters;
 using CS.API.CompanyEmployees.Extensions;
@@ -48,6 +49,11 @@ namespace CS.API.CompanyEmployees
             services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
             services.AddScoped<ValidateMediaTypeAttribute>();
             services.AddScoped<EmployeeLinks>();
+            services.ConfigureResponseCaching();
+            services.ConfigureHttpCacheHeaders();
+            services.AddMemoryCache();
+            services.ConfigureRateLimitingOptions(); 
+            services.AddHttpContextAccessor();
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
@@ -61,13 +67,14 @@ namespace CS.API.CompanyEmployees
                 //it should return the 406 Not Acceptable status code.
                 config.ReturnHttpNotAcceptable = true;
                 config.OutputFormatters.Add(new CsvOutputFormatter());
+                config.CacheProfiles.Add("120SecondsDuration", new CacheProfile { Duration = 120 });
             })
             .AddNewtonsoftJson()
             .AddXmlDataContractSerializerFormatters()
             .AddCustomCSVFormatter();
 
             services.AddCustomMediaTypes();
-        
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,7 +89,15 @@ namespace CS.API.CompanyEmployees
 
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
-            app.UseForwardedHeaders(new ForwardedHeadersOptions { ForwardedHeaders = ForwardedHeaders.All });
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.All
+            }
+            );
+
+            app.UseResponseCaching();
+            app.UseHttpCacheHeaders();
+            app.UseIpRateLimiting();
             app.UseRouting();
 
             app.UseAuthorization();
