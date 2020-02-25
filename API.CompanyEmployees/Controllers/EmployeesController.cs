@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CS.API.CompanyEmployees.CustomActionFilters;
+using CS.API.CompanyEmployees.Utility;
 using CS.Contracts;
 using CS.Entities.DataTransferObjects;
 using CS.Entities.Models;
@@ -23,15 +24,24 @@ namespace CS.API.CompanyEmployees.Controllers
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
+        //private readonly IDataShaper<EmployeeDto> _dataShaper;
+        private readonly EmployeeLinks _employeeLinks;
 
-        public EmployeesController(ILoggerManager loggerManager, IRepositoryManager repositoryManager, IMapper mapper)
+        public EmployeesController(ILoggerManager loggerManager, IRepositoryManager repositoryManager, IMapper mapper,
+            //IDataShaper<EmployeeDto> dataShaper, 
+            EmployeeLinks employeeLinks)
+
         {
             _repository = repositoryManager;
             _logger = loggerManager;
             _mapper = mapper;
+            // _dataShaper = dataShaper;
+            _employeeLinks = employeeLinks;
         }
 
+        //https://localhost:5001/api/companies/C9D4C053-49B6-410C-BC78-2D54A9991870/employees?pageNumber=1&pageSize=4&minAge=26&maxAge=32&searchTerm=A&orderBy=name asc&fields=name,age
         [HttpGet]
+        [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
         public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
         {
             if (!employeeParameters.ValidAgeRange)
@@ -52,8 +62,10 @@ namespace CS.API.CompanyEmployees.Controllers
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(employeesFromDb.MetaData));
 
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
-
-            return Ok(employeesDto);
+            var links = _employeeLinks.TryGenerateLinks(employeesDto, employeeParameters.Fields, companyId, HttpContext);
+            return links.HasLinks ? Ok(links.LinkedEntities) : Ok(links.ShapedEntities);
+            //return Ok(_dataShaper.ShapeData(employeesDto, employeeParameters.Fields));
+            //return Ok(employeesDto);
         }
 
         [HttpGet("{id}", Name = "GetEmployeeForCompany")]

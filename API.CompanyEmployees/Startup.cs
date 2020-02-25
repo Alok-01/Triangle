@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CS.API.CompanyEmployees.CustomActionFilters;
 using CS.API.CompanyEmployees.Extensions;
+using CS.API.CompanyEmployees.Utility;
 using CS.Contracts;
+using CS.Entities.DataTransferObjects;
+using CS.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -42,6 +45,9 @@ namespace CS.API.CompanyEmployees
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateCompanyExistsAttribute>();
             services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
+            services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
+            services.AddScoped<ValidateMediaTypeAttribute>();
+            services.AddScoped<EmployeeLinks>();
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
@@ -59,6 +65,9 @@ namespace CS.API.CompanyEmployees
             .AddNewtonsoftJson()
             .AddXmlDataContractSerializerFormatters()
             .AddCustomCSVFormatter();
+
+            services.AddCustomMediaTypes();
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
