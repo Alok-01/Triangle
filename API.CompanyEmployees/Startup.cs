@@ -49,11 +49,15 @@ namespace CS.API.CompanyEmployees
             services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
             services.AddScoped<ValidateMediaTypeAttribute>();
             services.AddScoped<EmployeeLinks>();
+            services.AddScoped<IAuthenticationManager, AuthenticationManager>();
             services.ConfigureResponseCaching();
             services.ConfigureHttpCacheHeaders();
             services.AddMemoryCache();
             services.ConfigureRateLimitingOptions(); 
             services.AddHttpContextAccessor();
+            services.AddAuthentication(); 
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
@@ -99,7 +103,7 @@ namespace CS.API.CompanyEmployees
             app.UseHttpCacheHeaders();
             app.UseIpRateLimiting();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
