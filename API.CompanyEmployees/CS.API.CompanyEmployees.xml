@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CS.API.CompanyEmployees</name>
+    </assembly>
+    <members>
+        <member name="M:CS.API.CompanyEmployees.Controllers.CompaniesController.GetCompanies">
+            <summary>
+            Get the list of Companies
+            </summary>
+            <returns>The companies list</returns>
+        </member>
+        <member name="M:CS.API.CompanyEmployees.Controllers.CompaniesController.CreateCompany(CS.Entities.DataTransferObjects.CompanyForCreationDto)">
+            <summary>
+            Creates a newly created company
+            </summary>
+            <param name="company"></param>
+            <returns>A newly created company</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>
+            <response code="422">If the model is invalid</response>
+        </member>
+        <member name="M:CS.API.CompanyEmployees.CustomActionFilters.ValidateMediaTypeAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            check for the existence of the Accept header first. If it’s not present, we return BadRequest. 
+            If it is, we parse the media type — and if there is no valid media type present, 
+            we return BadRequest.
+            </summary>
+            <param name="context">ActionExecutingContext </param>
+        </member>
+        <member name="M:CS.API.CompanyEmployees.Extensions.ServiceExtensions.ConfigureIISIntegration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure IIS Integration
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CS.API.CompanyEmployees.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Cors
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CS.API.CompanyEmployees.Extensions.ServiceExtensions.ConfigureLoggerService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Confgire NLoger Servce
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>

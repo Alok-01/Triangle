@@ -53,11 +53,12 @@ namespace CS.API.CompanyEmployees
             services.ConfigureResponseCaching();
             services.ConfigureHttpCacheHeaders();
             services.AddMemoryCache();
-            services.ConfigureRateLimitingOptions(); 
+            services.ConfigureRateLimitingOptions();
             services.AddHttpContextAccessor();
-            services.AddAuthentication(); 
+            services.AddAuthentication();
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
+            services.ConfigureSwagger();
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true; //To return 422 instead of 400
@@ -105,6 +106,12 @@ namespace CS.API.CompanyEmployees
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Alok CompanyEmployee API v1");
+                s.SwaggerEndpoint("/swagger/v2/swagger.json", "Alok CompanyEmployee API v2");
+            });
 
             app.UseEndpoints(endpoints =>
             {
