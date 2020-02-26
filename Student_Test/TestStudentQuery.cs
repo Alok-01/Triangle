@@ -11,27 +11,27 @@ namespace Student_Test
 {
     public class TestStudentQuery
     {
-        [Fact]
-        public void Test_TotalStudentCountBeTwo()
-        {
-            var studentEntity = new StudentEntity();
-            var mockStudenteRepository = new Mock<IStudenteRepository>();
-            var mockBusinessService = new Mock<IStudentBusinessService>();
-            var mockstudent = new List<IStudentEntity>
-            {
+        //[Fact]
+        //public void Test_TotalStudentCountBeTwo()
+        //{
+        //    var studentEntity = new StudentEntity();
+        //    var mockStudenteRepository = new Mock<IStudenteRepository>();
+        //    var mockBusinessService = new Mock<IStudentBusinessService>();
+        //    var mockstudent = new List<IStudentEntity>
+        //    {
 
-                new StudentEntity { StudentId = 1, StudentRollNumber = "B10", StudentName = "John", StudentFatherName = "Paul", StudentMotherName = "Lena" },
-                new StudentEntity { StudentId = 2, StudentRollNumber = "C10", StudentName = "Jack", StudentFatherName = "Pundit", StudentMotherName = "Kaul" }
-            };
+        //        new StudentEntity { StudentId = 1, StudentRollNumber = "B10", StudentName = "John", StudentFatherName = "Paul", StudentMotherName = "Lena" },
+        //        new StudentEntity { StudentId = 2, StudentRollNumber = "C10", StudentName = "Jack", StudentFatherName = "Pundit", StudentMotherName = "Kaul" }
+        //    };
 
-            var res = mockBusinessService.Setup(d => d.GetAllStudentList()).Returns(mockstudent);
+        //    var res = mockBusinessService.Setup(d => d.GetAllStudentList()).Returns(mockstudent);
 
-            //var abc = mockBusinessService.Object;
+        //    //var abc = mockBusinessService.Object;
 
-            //Assert.Equal("2", abc.GetAllStudentList().Count.ToString());
-            //Assert.Equal("2", abc.GetAllStudentList().Count.ToString());
-            Assert.Equal("2", mockBusinessService.Object.GetAllStudentList().Count.ToString());
-        }
+        //    //Assert.Equal("2", abc.GetAllStudentList().Count.ToString());
+        //    //Assert.Equal("2", abc.GetAllStudentList().Count.ToString());
+        //    Assert.Equal("2", mockBusinessService.Object.GetAllStudentList().Count.ToString());
+        //}
 
         [Theory]
         [InlineData(2)]

@@ -65,10 +65,10 @@ namespace Triangle.StudentModelServices
         /// Get All Student List
         /// </summary>
         /// <returns>Student Registration Model</returns>
-        public List<StudentRegistrationModel> GetAllStudentList()
+        public async Task<ResponseModel<StudentRegistrationModel>> GetAllStudentList()
         {
-            List<StudentRegistrationModel> returnResponse = new List<StudentRegistrationModel>();
-            var lstStudent = _studentBusinessService.GetAllStudentList();
+            ResponseModel<StudentRegistrationModel> returnResponse = new ResponseModel<StudentRegistrationModel>();
+            var lstStudent = await _studentBusinessService.GetAllStudentList();
 
             foreach (var item in lstStudent)
             {
@@ -80,12 +80,38 @@ namespace Triangle.StudentModelServices
                     StudentMotherName = item.StudentMotherName,
                     StudentRollNumber = item.StudentRollNumber
                 };
-                returnResponse.Add(temp);
+
+                returnResponse.ListObject.Add(temp);
             }
 
             return returnResponse;
         }
 
+        /// <summary>
+        /// Get All Student List
+        /// </summary>
+        /// <returns>Student Registration Model</returns>
+        public async Task<List<StudentRegistrationModel>> GetAllStudentListCqrs()
+        {
+            List<StudentRegistrationModel> returnResponse = new List<StudentRegistrationModel>();
+            var lstStudent = await _studentBusinessService.GetAllStudentList();
+
+            foreach (var item in lstStudent)
+            {
+                var temp = new StudentRegistrationModel
+                {
+                    StudentId = item.StudentId,
+                    StudentName = item.StudentName,
+                    StudentFatherName = item.StudentFatherName,
+                    StudentMotherName = item.StudentMotherName,
+                    StudentRollNumber = item.StudentRollNumber
+                };
+
+                returnResponse.Add(temp);
+            }
+
+            return returnResponse;
+        }
         /// <summary>
         /// Get AllStudentList With Paging Sorting
         /// </summary>

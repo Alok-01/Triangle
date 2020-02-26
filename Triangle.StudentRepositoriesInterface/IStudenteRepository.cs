@@ -17,7 +17,7 @@ namespace Triangle.StudentRepositoriesInterface
         /// </summary>
         /// <returns>Student List</returns>
         //Task<IList<IStudentEntity>> GetAllStudentList();
-        List<IStudentEntity> GetAllStudentList();
+        Task<List<IStudentEntity>> GetAllStudentList();
 
         /// <summary>
         /// Student Entity

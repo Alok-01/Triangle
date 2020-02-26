@@ -26,9 +26,9 @@ namespace Triangle.StudentBusinessServices
         /// Get All Student List
         /// </summary>
         /// <returns>Student Entity List</returns>
-        public IList<IStudentEntity> GetAllStudentList()
+        public async Task<IList<IStudentEntity>> GetAllStudentList()
         {
-            var lstStudent = _studenteRepository.GetAllStudentList();
+            var lstStudent = await _studenteRepository.GetAllStudentList();
             return lstStudent;
         }
 

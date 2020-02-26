@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Triangle.Logging;
 using Triangle.MvcClient.Common;
 using Triangle.StudentViewModels;
@@ -17,6 +19,7 @@ namespace Triangle.MvcClient.Controllers
         private static string apiGetStudentUri = "https://localhost:44345/student/getstudent?id="; // Triangle.ApiStudent = ApiOne
         //private static string apiPostStudentUri = "https://localhost:44345/student/secretcreatestudent"; // Triangle.ApiStudent = ApiOne
         private static string apiPostStudentUri = "/student/secretcreatestudent"; // Triangle.ApiStudent = ApiOne
+        private static string apiGetStudentListUri = "https://localhost:44345/student/getallstudent"; // Triangle.ApiStudent = ApiOne
 
         /// <summary>
         /// Student Controller
@@ -87,8 +90,31 @@ namespace Triangle.MvcClient.Controllers
             var strUrl = apiGetStudentUri + id;
 
             var result = await this.ApiGetAsync(strUrl);
-            return RedirectToAction("Index", "Home");
+            //var model = JsonConvert.DeserializeObject<List<StudentRegistrationModel>>(await result.Content.ReadAsStringAsync());
+            var model = await result.Content.ReadAsStringAsync();
+            var modeljson = JsonConvert.DeserializeObject<StudentRegistrationModel>(model);
+            return View("Student", modeljson);
+            //return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// Student Id todo: complete model code need to implement
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpGet]
+        [Route("/student/studentlist")]
+        public async Task<IActionResult> StudentList()
+        {
+            var strUrl = apiGetStudentListUri;
+
+            var result = await this.ApiGetAsync(strUrl);
+            //var model = JsonConvert.DeserializeObject<List<StudentRegistrationModel>>(await result.Content.ReadAsStringAsync());
+            var model = await result.Content.ReadAsStringAsync();
+            var modeljson = JsonConvert.DeserializeObject<List<StudentRegistrationModel>>(model);
+            return View("StudentList", modeljson);
+            //return RedirectToAction("Index", "Home");
+        }
     }
 }

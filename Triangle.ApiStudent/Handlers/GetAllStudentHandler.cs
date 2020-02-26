@@ -21,7 +21,7 @@ namespace Triangle.ApiStudent.Handlers
 
         public async Task<List<StudentRegistrationModel>> Handle(GetAllStudentQuery request, CancellationToken cancellationToken)
         {
-            var response = _studentModelService.GetAllStudentList();
+            var response = await _studentModelService.GetAllStudentListCqrs();
 
             return response;
         }

@@ -15,7 +15,7 @@ namespace Triangle.StudentBusinessServicesInterface
         /// Get All Student List
         /// </summary>
         /// <returns>Student Entity List</returns>
-        IList<IStudentEntity> GetAllStudentList();
+        Task<IList<IStudentEntity>> GetAllStudentList();
 
         /// <summary>
         /// Create Student

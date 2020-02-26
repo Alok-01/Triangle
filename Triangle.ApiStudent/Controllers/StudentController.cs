@@ -73,7 +73,7 @@ namespace Triangle.ApiStudent
         [HttpGet]
         public IActionResult GetStudent(int id)
         {
-            var result = _studentModelService.GetAllStudentList().Where(s => s.StudentId == id);
+            var result = _studentModelService.GetAllStudentList().Result.ListObject.Where(s => s.StudentId == id).FirstOrDefault();
             return Ok(result);
         }
 
@@ -86,7 +86,7 @@ namespace Triangle.ApiStudent
         [HttpGet]
         public IActionResult GetAllStudent()
         {
-            var result = _studentModelService.GetAllStudentList();
+            var result = _studentModelService.GetAllStudentList().Result.ListObject;
             return Ok(result);
         }
     }

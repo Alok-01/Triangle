@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Triangle.StudentViewModels.StudentRegistrationModel>
+
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h1>StudentList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentRollNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentFatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentMotherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentRollNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentFatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentMotherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

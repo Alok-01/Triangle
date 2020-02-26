@@ -16,6 +16,7 @@ namespace Triangle.Common.CommonModel
 		public int PageSize;
 		public Boolean IsAuthenicated;
 		public T Entity;
+		public List<T> ListObject;
 
 		public ResponseModel()
 		{
@@ -26,6 +27,7 @@ namespace Triangle.Common.CommonModel
 			TotalPages = 0;
 			PageSize = 0;
 			IsAuthenicated = false;
+			ListObject = new List<T>();
 		}
 	}
 }

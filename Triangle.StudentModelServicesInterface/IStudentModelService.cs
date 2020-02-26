@@ -11,11 +11,13 @@ namespace Triangle.StudentModelServicesInterface
     public interface IStudentModelService
     {
         /// <summary>
-        /// Create Student
+        /// Get All Student
         /// </summary>
         /// <param name="vm">StudentRegistrationModel Model</param>
         /// <returns></returns>
-        List<StudentRegistrationModel> GetAllStudentList();
+        Task<ResponseModel<StudentRegistrationModel>> GetAllStudentList();
+
+        Task<List<StudentRegistrationModel>> GetAllStudentListCqrs();
 
         /// <summary>
         /// Get All Student List

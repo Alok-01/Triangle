@@ -19,7 +19,7 @@ namespace Triangle.StudentRepositories
         /// </summary>
         /// <returns>Student List</returns>
         //public async Task<IList<IStudentEntity>> GetAllStudentList()
-        public List<IStudentEntity> GetAllStudentList()
+        public async Task<List<IStudentEntity>> GetAllStudentList()
         {
             List<IStudentEntity> studentEntities = new List<IStudentEntity>();
             using (var dataTransfer = StudentDbService.FetchAllStudents())
