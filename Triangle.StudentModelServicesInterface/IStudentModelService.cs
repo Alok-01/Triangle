@@ -36,5 +36,7 @@ namespace Triangle.StudentModelServicesInterface
         /// <param name="sortOrder">sort Order</param>
         /// <returns>Student data table</returns>
         List<StudentRegistrationModel> GetAllStudentListWithPaging_Sorting(string searchValue, int pageNo, int pageSize, string sortColumn, string sortOrder);
+
+        Task<ResponseModel<StudentRegistrationModel>> GetStudentById(int studentId);
     }
 }

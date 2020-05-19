@@ -4,6 +4,8 @@
     ViewData["Title"] = "StudentList";
 }
 
+@Html.Label("Data Name", (string)ViewBag.Status)
+
 <h1>StudentList</h1>
 
 <p>
@@ -34,32 +36,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentRollNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentFatherName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StudentMotherName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Message)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentRollNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentFatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentMotherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
+                    @Html.ActionLink("Details", "student", new { id = item.StudentId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

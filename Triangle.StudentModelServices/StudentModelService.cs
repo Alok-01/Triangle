@@ -28,7 +28,7 @@ namespace Triangle.StudentModelServices
         {
             _studentBusinessService = studentBusinessService;
         }
-       
+
         /// <summary>
         /// Create Student
         /// </summary>
@@ -61,6 +61,27 @@ namespace Triangle.StudentModelServices
             return returnResponse;
         }
 
+        public async Task<ResponseModel<StudentRegistrationModel>> GetStudentById(int studentId)
+        {
+            ResponseModel<StudentRegistrationModel> responseModel = new ResponseModel<StudentRegistrationModel>();
+
+            var student = await _studentBusinessService.GetStudentById(studentId);
+
+            var temp = new StudentRegistrationModel
+            {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                StudentFatherName = student.StudentFatherName,
+                StudentMotherName = student.StudentMotherName,
+                StudentRollNumber = student.StudentRollNumber
+            };
+
+            responseModel.Entity = temp;
+            responseModel.ListObject.Add(temp);
+            responseModel.ReturnStatus = true;
+            return responseModel;
+        }
+
         /// <summary>
         /// Get All Student List
         /// </summary>
@@ -69,7 +90,12 @@ namespace Triangle.StudentModelServices
         {
             ResponseModel<StudentRegistrationModel> returnResponse = new ResponseModel<StudentRegistrationModel>();
             var lstStudent = await _studentBusinessService.GetAllStudentList();
-
+            if (lstStudent.Count <= 0)
+            {
+                returnResponse.ReturnMessage.Add("No Record Found");
+                returnResponse.ReturnStatus = false;
+                return returnResponse;
+            }
             foreach (var item in lstStudent)
             {
                 var temp = new StudentRegistrationModel
@@ -141,5 +167,7 @@ namespace Triangle.StudentModelServices
 
             return returnResponse;
         }
+
+       
     }
 }

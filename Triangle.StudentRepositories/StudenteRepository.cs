@@ -56,8 +56,8 @@ namespace Triangle.StudentRepositories
             return result;
         }
 
-        public IStudentEntity GetStudentById(int studentId)
-        //public async Task<IStudentEntity> GetStudentById(int studentId)
+        //public IStudentEntity GetStudentById(int studentId)
+        public async Task<IStudentEntity> GetStudentById(int studentId)
         {
             if (studentId <= 0) return null;
 

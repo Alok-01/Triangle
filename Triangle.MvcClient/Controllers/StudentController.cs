@@ -66,15 +66,21 @@ namespace Triangle.MvcClient.Controllers
                 }
                 else
                 {
-                    ViewBag.Name = "Saved!";
-                    return View(vm);
+                   
+                    ViewBag.Status = $"The student name { vm.StudentName } is record created! ";
+                    RedirectToAction("studentlist", "student");
+                    // return View(vm);
                 }
             }
             catch (Exception ex)
             {
                 LogSecurity.Warning("Exception on StudentRegistration Post : ", ex.InnerException.ToString());
+                //return View(vm);
             }
+
             return View(vm);
+            //RedirectToAction("studentlist", "student");
+            
         }
 
         /// <summary>

@@ -60,9 +60,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Application Notes"
 		Implementation REST.txt = Implementation REST.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Entities", "CS.Entities\CS.Entities.csproj", "{306FC277-645D-4E81-A0BB-638342677762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Entities", "CS.Entities\CS.Entities.csproj", "{306FC277-645D-4E81-A0BB-638342677762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Repository", "CS.Repository\CS.Repository.csproj", "{769EEDA5-C078-4A7B-B6D6-6B373459194D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Repository", "CS.Repository\CS.Repository.csproj", "{769EEDA5-C078-4A7B-B6D6-6B373459194D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle.AzureFunction", "Triangle.AzureFunction\Triangle.AzureFunction.csproj", "{77331A15-C677-4DB1-8B03-918C82534CFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -162,6 +164,10 @@ Global
 		{769EEDA5-C078-4A7B-B6D6-6B373459194D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769EEDA5-C078-4A7B-B6D6-6B373459194D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769EEDA5-C078-4A7B-B6D6-6B373459194D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77331A15-C677-4DB1-8B03-918C82534CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77331A15-C677-4DB1-8B03-918C82534CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77331A15-C677-4DB1-8B03-918C82534CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77331A15-C677-4DB1-8B03-918C82534CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

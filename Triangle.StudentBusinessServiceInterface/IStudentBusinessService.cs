@@ -10,7 +10,7 @@ namespace Triangle.StudentBusinessServicesInterface
     public interface IStudentBusinessService
     {
         //Task<IStudentEntity> GetStudentById(int studentId);
-        IStudentEntity GetStudentById(int studentId);
+        Task<IStudentEntity> GetStudentById(int studentId);
         /// <summary>
         /// Get All Student List
         /// </summary>

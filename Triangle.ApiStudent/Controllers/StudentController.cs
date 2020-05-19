@@ -71,10 +71,17 @@ namespace Triangle.ApiStudent
         [Authorize]
         [Route("/student/getstudent")]
         [HttpGet]
-        public IActionResult GetStudent(int id)
+        public async Task<IActionResult> GetStudent(int id)
         {
-            var result = _studentModelService.GetAllStudentList().Result.ListObject.Where(s => s.StudentId == id).FirstOrDefault();
-            return Ok(result);
+            var re = await _studentModelService.GetAllStudentList();
+            if (!re.ReturnStatus)
+            {
+                return NoContent();
+            }
+            var resulta = _studentModelService.GetAllStudentList().Result.ListObject.Where(s => s.StudentId == id).FirstOrDefault();
+            //var studentResult = await _studentModelService.GetStudentById(id);
+            var studentResult = re.ListObject.Where(s => s.StudentId == id).FirstOrDefault();
+            return Ok(studentResult);
         }
 
         /// <summary>

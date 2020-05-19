@@ -38,9 +38,9 @@ namespace Triangle.StudentBusinessServices
         /// <param name="studentId">Student Id</param>
         /// <returns>Return Student id</returns>
         //public async Task<IStudentEntity> GetStudentById(int studentId)
-        public IStudentEntity GetStudentById(int studentId)
+        public async Task<IStudentEntity> GetStudentById(int studentId)
         {
-            var studentEntity = _studenteRepository.GetStudentById(studentId);
+            var studentEntity = await _studenteRepository.GetStudentById(studentId);
             return studentEntity;
         }
 

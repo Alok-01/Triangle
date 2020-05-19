@@ -9,8 +9,8 @@ namespace Triangle.StudentRepositoriesInterface
     /// </summary>
     public interface IStudenteRepository
     {
-        //Task<IStudentEntity> GetStudentById(int studentId);
-        IStudentEntity GetStudentById(int studentId);
+        Task<IStudentEntity> GetStudentById(int studentId);
+        //IStudentEntity GetStudentById(int studentId);
 
         /// <summary>
         /// Get All students 
